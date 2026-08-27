@@ -1,0 +1,10 @@
+# AC-Downloader Pro is engineered to run on pure Python Standard Library where possible,
+# but requires the following for the standalone GUI build:
+pyinstaller
+pywin32
+customtkinter
+darkdetect
+requests
+urllib3
+pymupdf
+pywebview
