@@ -45,5 +45,26 @@
 
 به هیچ دانش فنی نیاز ندارید. کافیست از بخش [Releases](../../releases) مخزن، آخرین نسخه فایل نصبی ویندوز (AC-Downloader-Setup-1.0.0-win64.exe) را دانلود کرده و مانند یک برنامه معمولی نصب کنید.
 
+### 🐧 اجرا در لینوکس و مک (Linux / macOS)
+کاربران لینوکس نیازی به فایل اجرایی ندارند و می‌توانند سورس‌کد را مستقیماً اجرا کنند. از آنجا که رابط کاربری از `WebKitGTK` استفاده می‌کند، نصب پیش‌نیازهای زیر الزامی است:
+
+```bash
+# 1. نصب پیش‌نیازهای سیستمی (اوبونتو/دبیان)
+sudo apt update
+sudo apt install -y python3-venv ffmpeg libgirepository1.0-dev gir1.2-gtk-3.0 gir1.2-webkit2-4.0
+
+# 2. دریافت پروژه
+git clone https://github.com/arian13es/AC-Downloader-Pro.git
+cd AC-Downloader-Pro
+
+# 3. ایجاد محیط مجازی و نصب پیش‌نیازهای پایتون
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# 4. اجرای برنامه
+python main.py
+```
+
 ---
 *توسعه داده شده با ❤️ برای دانشجویان دانشگاه تبریز.*
